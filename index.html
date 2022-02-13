@@ -11,8 +11,8 @@
 <!-- Navbar -->
 <div class="w3-top" id="home">
  <div class="w3-bar w3-theme-d2 w3-left-align">
-  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-  <span onclick="changePage('home')" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>buh.tj</span>
+  <span id="clickable" class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" onclick="toggleNav('menu')"><i class="fa fa-bars"></i></span>
+  <span onclick="changePage('home'), closeNav()" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>buh.tj</span>
   <span onclick="changePage('services')" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Услуги</span>
   <div class="w3-dropdown-hover w3-hide-small">
     <button class="w3-button" title="Notifications"><span onclick="changePage('instructions')" style="text-decoration: none;">Инструкции </span><i class="fa fa-caret-down"></i></button>     
@@ -39,29 +39,30 @@
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
-    <span onclick="changePage('services'), openNav()" class="w3-bar-item w3-button" style="cursor: pointer">Услуги</span>
+    <span onclick="changePage('services'), toggleNav()" class="w3-bar-item w3-button" style="cursor: pointer">Услуги</span>
     <div class="w3-dropdown-hover">
       <button onclick="changePage('instructions'), toggleSubmenu('instructionsSubmenu')" class="w3-button" title="Notifications"><span style="text-decoration: none;">Инструкции </span><i class="fa fa-caret-down"></i></button>     
       <div id="instructionsSubmenu" style="margin-left: 20px; display: none;">
-        <span onclick="changePage('anyDesk'), openNav()" class="w3-bar-item w3-button">Инструкция по AnyDesk</span>
-        <span onclick="changePage('token'), openNav()"  class="w3-bar-item w3-button">Инструкция токена</span>
-        <span onclick="changePage('cryptoPro'), openNav()" class="w3-bar-item w3-button">Инструкция по КриптоПро</span>
+        <span onclick="changePage('anyDesk'), toggleNav()" class="w3-bar-item w3-button">Инструкция по AnyDesk</span>
+        <span onclick="changePage('token'), toggleNav()"  class="w3-bar-item w3-button">Инструкция токена</span>
+        <span onclick="changePage('cryptoPro'), toggleNav()" class="w3-bar-item w3-button">Инструкция по КриптоПро</span>
       </div>
     </div>
     <div class="w3-dropdown-hover">
       <button onclick="changePage('instructions'), toggleSubmenu('documentsSubmenu')" class="w3-button" title="Notifications"><span style="text-decoration: none;">Документы </span><i class="fa fa-caret-down"></i></button>     
-      <div id="documentsSubmenu" style="margin-left: 20px; display: none;">        <span onclick="changePage('taxDocuments'), openNav()" class="w3-bar-item w3-button">Документы налоговой</span>
-        <span onclick="changePage('bankDocuments'), openNav()"  class="w3-bar-item w3-button">Документы банков</span>
-        <span onclick="changePage('pensionDocuments'), openNav()" class="w3-bar-item w3-button">Документы пенсионного фонда</span>
-        <span onclick="changePage('statisticsDocuments'), openNav()" class="w3-bar-item w3-button">Документы статистики</span>
+      <div id="documentsSubmenu" style="margin-left: 20px; display: none;">        <span onclick="changePage('taxDocuments'), toggleNav()" class="w3-bar-item w3-button">Документы налоговой</span>
+        <span onclick="changePage('bankDocuments'), toggleNav()"  class="w3-bar-item w3-button">Документы банков</span>
+        <span onclick="changePage('pensionDocuments'), toggleNav()" class="w3-bar-item w3-button">Документы пенсионного фонда</span>
+        <span onclick="changePage('statisticsDocuments'), toggleNav()" class="w3-bar-item w3-button">Документы статистики</span>
       </div>
     </div>
-    <span onclick="changePage('vacancies'), openNav()" class="w3-bar-item w3-button" style="cursor: pointer">Вакансии</span>
-    <span onclick="changePage('contacts'), openNav()" class="w3-bar-item w3-button" style="cursor: pointer">Контакты</span>
+    <span onclick="changePage('vacancies'), toggleNav()" class="w3-bar-item w3-button" style="cursor: pointer">Вакансии</span>
+    <span onclick="changePage('contacts'), toggleNav()" class="w3-bar-item w3-button" style="cursor: pointer">Контакты</span>
   </div>
 </div>
 
-<!-- Image Header -->
+<div onclick="closeNav()">
+  <!-- Image Header -->
 <div class="w3-display-container w3-animate-opacity">
   <img src="accounting.jpeg" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
   <div class="w3-container w3-display-bottomleft w3-margin-bottom">  
@@ -306,6 +307,7 @@
 <footer class="w3-container w3-padding-32 w3-theme-d1 w3-center" onclick="closeNav()">
   <p>buh.tj | 2022</p>
 </footer>
+</div>
 
 <script>
 // Script for side navigation
@@ -317,7 +319,7 @@ function w3_open() {
 }
 
 // Used to toggle the menu on smaller screens when clicking on the menu button
-function openNav() {
+function toggleNav(tag) {
 
   var x = document.getElementById("navDemo");
   if (x.className.indexOf("w3-show") == -1) {
@@ -328,8 +330,12 @@ function openNav() {
   }
 }
 
+function closeNav() {
+    var x = document.getElementById("navDemo");
+    x.className = x.className.replace(" w3-show", "");
+}
+
 function changePage(page_id){
-  console.log(page_id);
   document.getElementById("instructions").style.display = "none";
   document.getElementById("anyDesk").style.display = "none";
   document.getElementById("token").style.display = "none";
@@ -346,9 +352,7 @@ function changePage(page_id){
   document.getElementById(page_id).scrollIntoView({ behavior: 'smooth'});
   if (page_id === 'home') {
     document.getElementById('services').style.display = "block";
-
   }
-  
 }
 
 function toggleSubmenu(tag) {
