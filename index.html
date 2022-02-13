@@ -41,17 +41,16 @@
   <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
     <span onclick="changePage('services'), openNav()" class="w3-bar-item w3-button" style="cursor: pointer">Услуги</span>
     <div class="w3-dropdown-hover">
-      <button class="w3-button" title="Notifications"><span onclick="changePage('instructions')" style="text-decoration: none;">Инструкции </span><i class="fa fa-caret-down"></i></button>     
-      <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+      <button onclick="changePage('instructions'), toggleSubmenu('instructionsSubmenu')" class="w3-button" title="Notifications"><span style="text-decoration: none;">Инструкции </span><i class="fa fa-caret-down"></i></button>     
+      <div id="instructionsSubmenu" style="margin-left: 20px; display: none;">
         <span onclick="changePage('anyDesk'), openNav()" class="w3-bar-item w3-button">Инструкция по AnyDesk</span>
         <span onclick="changePage('token'), openNav()"  class="w3-bar-item w3-button">Инструкция токена</span>
         <span onclick="changePage('cryptoPro'), openNav()" class="w3-bar-item w3-button">Инструкция по КриптоПро</span>
       </div>
     </div>
     <div class="w3-dropdown-hover">
-      <button class="w3-button" title="Notifications"><span onclick="changePage('documents')" style="text-decoration: none;">Документы </span><i class="fa fa-caret-down"></i></button>     
-      <div class="w3-dropdown-content w3-card-4 w3-bar-block">
-        <span onclick="changePage('taxDocuments'), openNav()" class="w3-bar-item w3-button">Документы налоговой</span>
+      <button onclick="changePage('instructions'), toggleSubmenu('documentsSubmenu')" class="w3-button" title="Notifications"><span style="text-decoration: none;">Документы </span><i class="fa fa-caret-down"></i></button>     
+      <div id="documentsSubmenu" style="margin-left: 20px; display: none;">        <span onclick="changePage('taxDocuments'), openNav()" class="w3-bar-item w3-button">Документы налоговой</span>
         <span onclick="changePage('bankDocuments'), openNav()"  class="w3-bar-item w3-button">Документы банков</span>
         <span onclick="changePage('pensionDocuments'), openNav()" class="w3-bar-item w3-button">Документы пенсионного фонда</span>
         <span onclick="changePage('statisticsDocuments'), openNav()" class="w3-bar-item w3-button">Документы статистики</span>
@@ -349,6 +348,18 @@ function changePage(page_id){
     document.getElementById('services').style.display = "block";
 
   }
+  
+}
+
+function toggleSubmenu(tag) {
+  
+    if (document.getElementById(tag).style.display === "none") {
+      document.getElementById(tag).style.display = "block";
+    } 
+
+    else {
+      document.getElementById(tag).style.display = "none";
+    } 
   
 }
 
