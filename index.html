@@ -15,7 +15,7 @@
   <span onclick="changePage('home'), closeNav()" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>buh.tj</span>
   <span onclick="changePage('services')" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Услуги</span>
   <div class="w3-dropdown-hover w3-hide-small">
-    <button class="w3-button" title="Notifications"><span onclick="changePage('instructions')" style="text-decoration: none;">Инструкции </span><i class="fa fa-caret-down"></i></button>     
+    <button onclick="changePage('instructions')" class="w3-button" title="Notifications"><span style="text-decoration: none;">Инструкции </span><i class="fa fa-caret-down"></i></button>     
     <div class="w3-dropdown-content w3-card-4 w3-bar-block">
       <span onclick="changePage('anyDesk')" class="w3-bar-item w3-button">Инструкция по AnyDesk</span>
       <span onclick="changePage('token')"  class="w3-bar-item w3-button">Инструкция токена</span>
@@ -23,7 +23,7 @@
     </div>
   </div>
   <div class="w3-dropdown-hover w3-hide-small">
-    <button class="w3-button" title="Notifications"><span onclick="changePage('documents')" style="text-decoration: none;">Документы </span><i class="fa fa-caret-down"></i></button>     
+    <button onclick="changePage('documents')" class="w3-button" title="Notifications"><span style="text-decoration: none;">Документы </span><i class="fa fa-caret-down"></i></button>     
     <div class="w3-dropdown-content w3-card-4 w3-bar-block">
       <span onclick="changePage('taxDocuments')" class="w3-bar-item w3-button">Документы налоговой</span>
       <span onclick="changePage('bankDocuments')"  class="w3-bar-item w3-button">Документы банков</span>
@@ -49,7 +49,7 @@
       </div>
     </div>
     <div class="w3-dropdown-hover">
-      <button onclick="changePage('instructions'), toggleSubmenu('documentsSubmenu')" class="w3-button" title="Notifications"><span style="text-decoration: none;">Документы </span><i class="fa fa-caret-down"></i></button>     
+      <button onclick="changePage('documents'), toggleSubmenu('documentsSubmenu')" class="w3-button" title="Notifications"><span style="text-decoration: none;">Документы </span><i class="fa fa-caret-down"></i></button>     
       <div id="documentsSubmenu" style="margin-left: 20px; display: none;">        <span onclick="changePage('taxDocuments'), toggleNav()" class="w3-bar-item w3-button">Документы налоговой</span>
         <span onclick="changePage('bankDocuments'), toggleNav()"  class="w3-bar-item w3-button">Документы банков</span>
         <span onclick="changePage('pensionDocuments'), toggleNav()" class="w3-bar-item w3-button">Документы пенсионного фонда</span>
@@ -131,9 +131,9 @@
 <div id="instructions" class="w3-container w3-padding-64 w3-theme-l5">
   <h2 style="margin-left: 20px;">Инструкции</h2>
   <ul>
-    <li style="cursor: pointer" onclick="changePage('anyDesk')">Инструкция по установке АnyDesk</li>
-    <li style="cursor: pointer" onclick="changePage('token')">Инструкция по работе с токеном</li>
-    <li style="cursor: pointer" onclick="changePage('cryptoPro')">Инструкция по настройке КриптоПро</li>
+    <li class="w3-hover-opacity"  style="cursor: pointer" onclick="changePage('anyDesk')">Инструкция по установке АnyDesk</li>
+    <li class="w3-hover-opacity"  style="cursor: pointer" onclick="changePage('token')">Инструкция по работе с токеном</li>
+    <li class="w3-hover-opacity"  style="cursor: pointer" onclick="changePage('cryptoPro')">Инструкция по настройке КриптоПро</li>
   </ul>
 </div>
 
@@ -145,7 +145,7 @@
   <ol>
     <li>Скачайте программу AnyDesk по этой <a href="https://anydesk.com/ru/downloads/thank-you?dv=win_exe">ссылке</a></li>
     <li>Установить на свой компьютер</li>
-    <li>Для подключения специалиста к вашему ПК, пишем свой адрес ( адрес состоит из 9 цифр)</li>
+    <li>Для подключения специалиста к вашему ПК, пишем свой адрес (адрес состоит из 9 цифр)</li>
   </ol>
 </div>
 
@@ -262,45 +262,51 @@
 
   <h2>Наши контакты</h2>
 
-  <div class="w3-third"><a href="https://www.google.com/maps/@40.2895764,69.6183546,19.46z " target="_blank"><img src="address.png" /> </a>
-
-    <h3 class="w3-center"><a href="https://www.google.com/maps/@40.2895764,69.6183546,19.46z " target="_blank">Адрес</a></h3>
-    <a href="https://www.google.com/maps/@40.2895764,69.6183546,19.46z " target="_blank"> </a>
-    
-    <p style="text-align:center"><a href="tel:+992927777777">г. ЛЕНИНАБАД</a></p>
+  <a class="w3-hover-opacity" href="https://www.google.com/maps/@40.2895764,69.6183546,19.46z " target="_blank" style="text-decoration: none;">
+    <div class="w3-third" style="margin-top: 50px;">
+      <img src="address.png" />
+      <h3>Адрес</h3>
+      <p style="margin-top: 0px;">г. Худжанд</p>
     </div>
+  </a>
     
-    <div class="w3-third"><a href="tel:+992927777777"><img src="telephone.png" /> </a>
+  <a class="w3-hover-opacity" href="tel:+992927777777" style="text-decoration: none;">
+    <div class="w3-third" style="margin-top: 50px;">
+      <img src="telephone.png" />
+      <h3>Телефон</h3>
+      <p style="margin-top: 0px;">+992 92 777 77 77</p>
+    </div>
+  </a>
+  
+  <a class="w3-hover-opacity" href="mailto:info@buh.tj" style="text-decoration: none;">
+    <div class="w3-third" style="margin-top: 50px;">
+      <img src="email.png" />
+      <h3>Эл. почта</h3>
+      <p style="margin-top: 0px;">info@buh.tj</p>
+    </div>
+  </a>
     
-    <h3 class="w3-center"><a href="tel:+992927777777">Телефон</a></h3>
-    <a href="tel:+992927777777"> </a>
+  <a class="w3-hover-opacity" href="viber://chat?number=992985026339" target="_blank" style="text-decoration: none;">
+    <div class="w3-third" style="margin-top: 50px;">
+      <img src="viber.png" />
+      <h3>VIBER</h3>
+    </div>
+  </a>
     
-    <p style="text-align:center"><a href="tel:+992927777777">+992 92 777 77 77</a></p>
-    <a href="tel:+992927777777"> </a></div>
-    
-    <div class="w3-third"><a href="mailto:info@buh.tj"><img src="email.png" /> </a>
-    
-    <h3 class="w3-center"><a href="mailto:info@buh.tj">Эл. почта</a></h3>
-    <a href="mailto:info@buh.tj"> </a>
-    
-    <p style="text-align:center"><a href="mailto:info@buh.tj">info@buh.tj</a></p>
-    <a href="mailto:info@buh.tj"> </a></div>
-    
-    <hr />
-    <div class="w3-third"><a href="viber://chat?number=992985026339" target="_blank"><img src="viber.png" /> </a>
-    
-    <h3 class="w3-center"><a href="viber://chat?number=992985026339" target="_blank">VIBER</a></h3>
-    <a href="viber://chat?number=992985026339" target="_blank"> </a></div>
-    
-    <div class="w3-third"><a href="https://wa.me/992985026339" target="_blank"><img src="whatsapp.png" /> </a>
-    
-    <h3 class="w3-center"><a href="https://wa.me/992985026339" target="_blank">WHATSAPP</a></h3>
-    <a href="https://wa.me/992985026339" target="_blank"> </a></div>
-    
-    <div class="w3-third"><a href="https://msng.link/o/?SurikYusupov=tg" target="_blank"><img src="telegram.png" /> </a>
-    
-    <h3 class="w3-center"><a href="https://msng.link/o/?SurikYusupov=tg" target="_blank">TELEGRAM</a></h3>
-    <a href="https://msng.link/o/?SurikYusupov=tg" target="_blank"> </a></div>
+  <a class="w3-hover-opacity" href="https://wa.me/992985026339" target="_blank" style="text-decoration: none;">
+    <div class="w3-third" style="margin-top: 50px;">
+      <img src="whatsapp.png" />
+      <h3>WHATSAPP</h3>
+    </div>
+  </a>
+  
+  <a class="w3-hover-opacity" href="https://msng.link/o/?SurikYusupov=tg" target="_blank" style="text-decoration: none;">
+    <div class="w3-third" style="margin-top: 50px;">  
+      <img src="telegram.png" />
+      <h3>TELEGRAM</h3>
+    </div>
+  </a>
+
 </div>
 
 <!-- Footer -->
@@ -360,7 +366,7 @@ function toggleSubmenu(tag) {
     if (document.getElementById(tag).style.display === "none") {
       document.getElementById(tag).style.display = "block";
     } 
-
+    
     else {
       document.getElementById(tag).style.display = "none";
     } 
