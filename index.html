@@ -12,8 +12,8 @@
 <!-- Navbar -->
 <div class="w3-top" id="home">
  <div class="w3-bar w3-theme-d2 w3-left-align">
-  <span id="clickable" class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" onclick="toggleNav('menu')"><i class="fa fa-bars"></i></span>
-  <span onclick="changePage('home'), closeNav()" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>buh.tj</span>
+  <span id="clickable" class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" onclick="toggleNav('menu')"><i id="menuIcon" class="fa fa-bars"></i></span>
+  <span onclick="changePage('home'), closeNav()" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home"></i> buh.tj</span>
   <span onclick="changePage('services')" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Услуги</span>
   <div class="w3-dropdown-hover w3-hide-small">
     <button onclick="changePage('instructions')" class="w3-button" title="Notifications"><span style="text-decoration: none;">Инструкции </span><i class="fa fa-caret-down"></i></button>     
@@ -73,7 +73,7 @@
 
 <!-- Modal -->
 <div id="id01" class="w3-modal">
-  <div class="messengerPopup"><span onclick="document.getElementById('id01').style.display='none'" class="w3-display-topright" style="font-size: 20px; cursor: pointer;">X</span>
+  <div class="messengerPopup"><span onclick="document.getElementById('id01').style.display='none'" class="w3-display-topright" style="font-size: 20px; cursor: pointer;"><i class="fa fa-close"></i></span>
     <div>
     <h2 style="margin: 10px 0 0 0">Мессенджеры</h2>
     </div>
@@ -108,7 +108,7 @@
 <!-- Services-->
 
 <div id="services" class="w3-container w3-center w3-padding-64 w3-theme-l5">
-  <h2>НАШИ УСЛУГИ</h2>
+  <h2>Наши услуги</h2>
   <p>Вот чем мы занимаемся</p>
 
     <div class="w3-half w3-hover-opacity" style="margin-top: 50px; cursor: pointer" onclick="document.getElementById('id01').style.display='block'">
@@ -130,7 +130,7 @@
 <!-- Instructions-->
 
 <div id="instructions" class="w3-container w3-padding-64 w3-theme-l5">
-  <h2 style="margin-left: 20px;">ИНСТРУКЦИИ</h2>
+  <h2 style="margin-left: 20px;">Инструкции</h2>
   <ul>
     <li class="w3-hover-opacity"  style="cursor: pointer" onclick="changePage('anyDesk')">Инструкция по установке АnyDesk</li>
     <li class="w3-hover-opacity"  style="cursor: pointer" onclick="changePage('token')">Инструкция по работе с токеном</li>
@@ -200,28 +200,28 @@
 
 <div id="documents" class="w3-container w3-center w3-padding-64 w3-theme-l5">
 
-  <h2>ДОКУМЕНТЫ</h2>
+  <h2>Документы</h2>
 
   <div class="w3-half w3-hover-opacity" style="margin-top: 50px; cursor: pointer" onclick="changePage('taxDocuments')">
     <img alt="" class="doublecenter" src="gerb.png" style="width:25%">
-    <h3 class="center">НАЛОГОВАЯ (АНДОЗ)</h3>
+    <h3 class="center">Налоговая (андоз)</h3>
   </div>
 
 
   <div class="w3-half w3-hover-opacity" style="margin-top: 50px; cursor: pointer" onclick="changePage('bankDocuments')">
     <img alt="" class="doublecenter" src="bank.png" style="width:25%">
-    <h3 class="center">БАНК (БОНК)</h3>
+    <h3 class="center">Банк (бонк)</h3>
   </div>
     
 
   <div class="w3-half w3-hover-opacity" style="margin-top: 50px; cursor: pointer" onclick="changePage('pensionDocuments')">
     <img alt="" class="doublecenter" src="pension.png" style="width:25%">
-    <h3 class="center">ПЕНСИОННЫЙ ФОНД (АДСИН)</h3>
+    <h3 class="center">Пенсионный фонд (АСИН)</h3>
   </div>
 
   <div class="w3-half w3-hover-opacity" style="margin-top: 50px; cursor: pointer" onclick="changePage('statisticsDocuments')">
     <img alt="" class="doublecenter" src="tajstat.png" style="width:25%">
-    <h3 class="center">СТАТИСТИКА (ОМОР)</h3>
+    <h3 class="center">Статистика (омор)</h3>
   </div>
 </div>
 
@@ -255,18 +255,18 @@
 
 <!-- Vacancies-->
 <div id="vacancies" class="w3-container w3-center w3-padding-64 w3-theme-l5">
-  <h2>ВАКАНСИИ</h2>
+  <h2>Вакансии</h2>
 </div>
 
 <!-- Contacts-->
 <div id="contacts" class="w3-container w3-center w3-padding-64 w3-theme-l5">
 
-  <h2>НАШИ КОНТАКТЫ</h2>
+  <h2>Наши контакты</h2>
 
   <a class="w3-hover-opacity" href="https://goo.gl/maps/74Vji7w96vEN3r8H6" target="_blank" style="text-decoration: none;">
     <div class="w3-third" style="margin-top: 50px;">
       <img src="address.png" />
-      <h3>АДРЕС</h3>
+      <h3>Адрес</h3>
       <p style="margin-top: 0px;">г. Худжанд</p>
     </div>
   </a>
@@ -274,7 +274,7 @@
   <a class="w3-hover-opacity" href="tel:+992927777777" style="text-decoration: none;">
     <div class="w3-third" style="margin-top: 50px;">
       <img src="telephone.png" />
-      <h3>ТЕЛЕФОН</h3>
+      <h3>Телефон</h3>
       <p style="margin-top: 0px;">+992 92 777 77 77</p>
     </div>
   </a>
@@ -282,7 +282,7 @@
   <a class="w3-hover-opacity" href="mailto:info@buh.tj" style="text-decoration: none;">
     <div class="w3-third" style="margin-top: 50px;">
       <img src="email.png" />
-      <h3>ЭЛ. ПОЧТА</h3>
+      <h3>Эл. почта</h3>
       <p style="margin-top: 0px;">info@buh.tj</p>
     </div>
   </a>
@@ -290,21 +290,21 @@
   <a class="w3-hover-opacity" href="viber://chat?number=992985026339" target="_blank" style="text-decoration: none;">
     <div class="w3-third" style="margin-top: 50px;">
       <img src="viber.png" />
-      <h3>VIBER</h3>
+      <h3>Viber</h3>
     </div>
   </a>
     
   <a class="w3-hover-opacity" href="https://wa.me/992985026339" target="_blank" style="text-decoration: none;">
     <div class="w3-third" style="margin-top: 50px;">
       <img src="whatsapp.png" />
-      <h3>WHATSAPP</h3>
+      <h3>WhatsApp</h3>
     </div>
   </a>
   
   <a class="w3-hover-opacity" href="https://msng.link/o/?SurikYusupov=tg" target="_blank" style="text-decoration: none;">
     <div class="w3-third" style="margin-top: 50px;">  
       <img src="telegram.png" />
-      <h3>TELEGRAM</h3>
+      <h3>Telegram</h3>
     </div>
   </a>
 
@@ -335,15 +335,19 @@ function toggleNav(tag) {
   var x = document.getElementById("navDemo");
   if (x.className.indexOf("w3-show") == -1) {
       x.className += " w3-show";
+      document.getElementById("menuIcon").className = "fa fa-close";
   }
   else {
     x.className = x.className.replace(" w3-show", "");
+    document.getElementById("menuIcon").className = "fa fa-bars";
+
   }
 }
 
 function closeNav() {
     var x = document.getElementById("navDemo");
     x.className = x.className.replace(" w3-show", "");
+    document.getElementById("menuIcon").className = "fa fa-bars";
 }
 
 function changePage(page_id){
