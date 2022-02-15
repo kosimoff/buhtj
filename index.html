@@ -7,13 +7,13 @@
 <link rel="stylesheet" href="w3.css">
 <link rel="stylesheet" href="w3-theme-black.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<body id="myPage">
+<body id="myPage" onclick="closeNav(), closeMessengers()">
 
 <!-- Navbar -->
 <div class="w3-top" id="home">
  <div class="w3-bar w3-theme-d2 w3-left-align">
-  <span id="clickable" class="w3-bar-item w3-hide-medium w3-hide-large w3-right w3-theme-d2" onclick="toggleNav('menu')"><i id="menuIcon" class="fa fa-bars"></i></span>
-  <span onclick="changePage('home'), closeNav()" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home"></i> buh.tj</span>
+  <span id="clickable" class="w3-bar-item w3-hide-medium w3-hide-large w3-right w3-theme-d2" onclick="toggleNav()"><i id="menuIcon" class="fa fa-bars"></i></span>
+  <span onclick="changePage('home')" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home"></i> buh.tj</span>
   <span onclick="changePage('services')" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Услуги</span>
   <div class="w3-dropdown-hover w3-hide-small">
     <button onclick="changePage('instructions')" class="w3-button" title="Notifications"><span style="text-decoration: none;">Инструкции </span><i class="fa fa-caret-down"></i></button>     
@@ -40,50 +40,49 @@
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
-    <span onclick="changePage('services'), toggleNav()" class="w3-bar-item w3-button" style="cursor: pointer">Услуги</span>
+    <span onclick="changePage('services')" class="w3-bar-item w3-button" style="cursor: pointer">Услуги</span>
     <div class="w3-dropdown-hover">
       <button onclick="changePage('instructions'), toggleSubmenu('instructionsSubmenu')" class="w3-button" title="Notifications"><span style="text-decoration: none;">Инструкции </span><i class="fa fa-caret-down"></i></button>     
       <div id="instructionsSubmenu" style="margin-left: 20px; display: none;">
-        <span onclick="changePage('anyDesk'), toggleNav()" class="w3-bar-item w3-button">Инструкция по AnyDesk</span>
-        <span onclick="changePage('token'), toggleNav()"  class="w3-bar-item w3-button">Инструкция токена</span>
-        <span onclick="changePage('cryptoPro'), toggleNav()" class="w3-bar-item w3-button">Инструкция по КриптоПро</span>
+        <span onclick="changePage('anyDesk')" class="w3-bar-item w3-button">Инструкция по AnyDesk</span>
+        <span onclick="changePage('token')"  class="w3-bar-item w3-button">Инструкция токена</span>
+        <span onclick="changePage('cryptoPro')" class="w3-bar-item w3-button">Инструкция по КриптоПро</span>
       </div>
     </div>
     <div class="w3-dropdown-hover">
       <button onclick="changePage('documents'), toggleSubmenu('documentsSubmenu')" class="w3-button" title="Notifications"><span style="text-decoration: none;">Документы </span><i class="fa fa-caret-down"></i></button>     
-      <div id="documentsSubmenu" style="margin-left: 20px; display: none;">        <span onclick="changePage('taxDocuments'), toggleNav()" class="w3-bar-item w3-button">Документы налоговой</span>
-        <span onclick="changePage('bankDocuments'), toggleNav()"  class="w3-bar-item w3-button">Документы банков</span>
-        <span onclick="changePage('pensionDocuments'), toggleNav()" class="w3-bar-item w3-button">Документы пенсионного фонда</span>
-        <span onclick="changePage('statisticsDocuments'), toggleNav()" class="w3-bar-item w3-button">Документы статистики</span>
+      <div id="documentsSubmenu" style="margin-left: 20px; display: none;">        <span onclick="changePage('taxDocuments')" class="w3-bar-item w3-button">Документы налоговой</span>
+        <span onclick="changePage('bankDocuments')"  class="w3-bar-item w3-button">Документы банков</span>
+        <span onclick="changePage('pensionDocuments')" class="w3-bar-item w3-button">Документы пенсионного фонда</span>
+        <span onclick="changePage('statisticsDocuments')" class="w3-bar-item w3-button">Документы статистики</span>
       </div>
     </div>
-    <span onclick="changePage('vacancies'), toggleNav()" class="w3-bar-item w3-button" style="cursor: pointer">Вакансии</span>
-    <span onclick="changePage('contacts'), toggleNav()" class="w3-bar-item w3-button" style="cursor: pointer">Контакты</span>
+    <span onclick="changePage('vacancies')" class="w3-bar-item w3-button" style="cursor: pointer">Вакансии</span>
+    <span onclick="changePage('contacts')" class="w3-bar-item w3-button" style="cursor: pointer">Контакты</span>
   </div>
 </div>
 
-<div onclick="closeNav()">
   <!-- Image Header -->
 <div class="w3-display-container w3-animate-opacity">
   <img src="accounting.jpeg" alt="" style="width:100%;min-height:350px;max-height:600px;">
   <div class="w3-container w3-display-bottomright w3-margin-bottom">  
-    <div onclick="document.getElementById('id01').style.display='block'" class="w3-xlarge w3-teal w3-hover-black" style="padding: 20px;" title="">ВНИМАНИЕ!<br>Доводим до Вашего сведения, что с 01.01.2022<br>мобильная авторизация отключена.<br>Подключение только по токену или по флешке.</div>
+    <div onclick="openMessengers()" class="w3-xlarge w3-teal w3-hover-black" style="padding: 20px;" title="">ВНИМАНИЕ!<br>Доводим до Вашего сведения, что с 01.01.2022<br>мобильная авторизация отключена.<br>Подключение только по токену или по флешке.</div>
   </div>
 </div>
 
-<!-- Modal -->
+<!-- Messengers -->
 <div id="id01" class="w3-modal">
-  <div class="messengerPopup"><span onclick="document.getElementById('id01').style.display='none'" class="w3-display-topright" style="font-size: 20px; cursor: pointer;"><i class="fa fa-close"></i></span>
+  <div class="messengerPopup"><span onclick="closeMessengers()" class="w3-display-topright" style="font-size: 20px; cursor: pointer;"><i class="fa fa-close"></i></span>
     <div>
     <h2 style="margin: 10px 0 0 0">Мессенджеры</h2>
     </div>
     
     <div style="width: 75%; margin: auto; padding: 10px 0 10px 0">
-      <a href="https://msng.link/o/?SurikYusupov=tg" style="color: white; text-decoration: none"><div style="background-color: #0088CC; padding: 10px">TELEGRAM</div></a>
+      <a target="_blank" href="https://msng.link/o/?SurikYusupov=tg" style="color: white; text-decoration: none"><div style="background-color: #0088CC; padding: 10px">TELEGRAM</div></a>
     
       <a href="viber://chat?number=992552188885" style="color: white; text-decoration: none"><div style="background-color: #59267c; padding: 10px; margin-top: 10px;">VIBER</div></a>
     
-      <a href="https://wa.me/992552188885" style="color: white; text-decoration: none"><div style="background-color: #075e54; padding: 10px; margin-top: 10px;">WHATSAPP</div></a>
+      <a target="_blank" href="https://wa.me/992552188885" style="color: white; text-decoration: none"><div style="background-color: #075e54; padding: 10px; margin-top: 10px;">WHATSAPP</div></a>
     </div>
     </div>
 </div>
@@ -111,19 +110,19 @@
   <h2>Наши услуги</h2>
   <p>Вот чем мы занимаемся</p>
 
-    <div class="w3-half w3-hover-opacity" style="margin-top: 50px; cursor: pointer" onclick="document.getElementById('id01').style.display='block'">
+    <div class="w3-half w3-hover-opacity" style="margin-top: 50px; cursor: pointer" onclick="openMessengers()">
         <img src="token.png" style="width:25%">
         <h3>Установка токена</h3>
         <p>Настройка и установка токена</p>
       </div>
   
-      <div class="w3-half w3-hover-opacity" style="margin-top: 50px; cursor: pointer"  onclick="document.getElementById('id01').style.display='block'">
+      <div class="w3-half w3-hover-opacity" style="margin-top: 50px; cursor: pointer"  onclick="openMessengers()">
         <img src="computer.png" style="width:25%">
         <h3>Компьютерная помощь</h3>
         <p>Установка программ, антивирусов</p>
       </div>
 
-    <button class="w3-hover-black w3-teal" style="margin: 50px 0 50px 0; padding: 20px; border-radius: 12px; border: none" onclick="document.getElementById('id01').style.display='block'">ОСТАВИТЬ ЗАЯВКУ</button>
+    <button class="w3-hover-black w3-teal" style="margin: 50px 0 50px 0; padding: 20px; border-radius: 12px; border: none" onclick="openMessengers()">ОСТАВИТЬ ЗАЯВКУ</button>
 
 </div>
 
@@ -315,10 +314,9 @@
 </div>
 
 <!-- Footer -->
-<footer class="w3-container w3-padding-32 w3-theme-d1 w3-center" onclick="closeNav()">
+<footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
   <p>&#169; <script>document.write(new Date().getFullYear())</script> - buh.tj</p>
 </footer>
-</div>
 
 <script>
 // Script for side navigation
@@ -329,9 +327,11 @@ function w3_open() {
   x.style.display = "block";
 }
 
-// Used to toggle the menu on smaller screens when clicking on the menu button
-function toggleNav(tag) {
+var menuReadyToClose = false;
 
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function toggleNav() {
+  menuReadyToClose = false;
   var x = document.getElementById("navDemo");
   if (x.className.indexOf("w3-show") == -1) {
       x.className += " w3-show";
@@ -340,14 +340,30 @@ function toggleNav(tag) {
   else {
     x.className = x.className.replace(" w3-show", "");
     document.getElementById("menuIcon").className = "fa fa-bars";
-
   }
 }
 
 function closeNav() {
-    var x = document.getElementById("navDemo");
-    x.className = x.className.replace(" w3-show", "");
-    document.getElementById("menuIcon").className = "fa fa-bars";
+    if (menuReadyToClose) {
+      var x = document.getElementById("navDemo");
+      x.className = x.className.replace(" w3-show", "");
+      document.getElementById("menuIcon").className = "fa fa-bars";
+    }
+    menuReadyToClose = true;
+}
+
+var messengersReadyToClose = false;
+
+function openMessengers() {
+  messengersReadyToClose = false;
+  document.getElementById('id01').style.display='block';
+}
+
+function closeMessengers() {
+  if (messengersReadyToClose) {
+    document.getElementById('id01').style.display='none';
+  }
+  messengersReadyToClose = true;
 }
 
 function changePage(page_id){
