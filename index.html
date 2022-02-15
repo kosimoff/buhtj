@@ -66,7 +66,7 @@
 <div class="w3-display-container w3-animate-opacity">
   <img src="accounting.jpeg" alt="" style="width:100%;min-height:350px;max-height:600px;">
   <div class="w3-container w3-display-bottomright w3-margin-bottom">  
-    <div onclick="openMessengers()" class="w3-xlarge w3-teal w3-hover-black" style="padding: 20px;" title="">ВНИМАНИЕ!<br>Доводим до Вашего сведения, что с 01.01.2022<br>мобильная авторизация отключена.<br>Подключение только по токену или по флешке.</div>
+    <div onclick="openMessengers()" class="w3-xlarge w3-teal w3-hover-black" style="padding: 20px; cursor: pointer;" title="">ВНИМАНИЕ!<br>Доводим до Вашего сведения, что с 01.01.2022<br>мобильная авторизация отключена.<br>Подключение только по токену или по флешке.</div>
   </div>
 </div>
 
@@ -110,16 +110,20 @@
   <h2>Наши услуги</h2>
   <p>Вот чем мы занимаемся</p>
 
-    <div class="w3-half w3-hover-opacity" style="margin-top: 50px; cursor: pointer" onclick="openMessengers()">
-        <img src="token.png" style="width:25%">
-        <h3>Установка токена</h3>
-        <p>Настройка и установка токена</p>
-      </div>
+    <div class="w3-half">
+        <button style="margin-top: 50px; cursor: pointer; border: none;" onclick="openMessengers()" class="w3-hover-opacity">
+          <img src="token.png" style="width:50%">
+          <h3>Установка токена</h3>
+          <p>Настройка и установка токена</p>
+        </button>
+    </div>
   
-      <div class="w3-half w3-hover-opacity" style="margin-top: 50px; cursor: pointer"  onclick="openMessengers()">
-        <img src="computer.png" style="width:25%">
+    <div class="w3-half">
+      <button style="margin-top: 50px; cursor: pointer; border: none;" onclick="openMessengers()" class="w3-hover-opacity">
+        <img src="computer.png" style="width:50%">
         <h3>Компьютерная помощь</h3>
         <p>Установка программ, антивирусов</p>
+      </button>
       </div>
 
     <button class="w3-hover-black w3-teal" style="margin: 50px 0 50px 0; padding: 20px; border-radius: 12px; border: none" onclick="openMessengers()">ОСТАВИТЬ ЗАЯВКУ</button>
@@ -201,27 +205,34 @@
 
   <h2>Документы</h2>
 
-  <div class="w3-half w3-hover-opacity" style="margin-top: 50px; cursor: pointer" onclick="changePage('taxDocuments')">
-    <img alt="" class="doublecenter" src="gerb.png" style="width:25%">
-    <h3 class="center">Налоговая (андоз)</h3>
-  </div>
+    <div class="w3-half" style="margin-top: 50px;">
+      <span style="cursor: pointer; border: none;" class="w3-hover-opacity" onclick="changePage('taxDocuments')">
+        <img src="gerb.png" style="width:20%"/>
+        <h3 class="center">Налоговая (андоз)</h3>
+      </span>
+    </div>
 
+    <div class="w3-half" style="margin-top: 50px;">
+      <span style="cursor: pointer; border: none;" class="w3-hover-opacity" onclick="changePage('bankDocuments')">
+        <img src="bank.png" style="width:20%"/>
+        <h3 class="center">Банк (бонк)</h3>
+      </span>
+    </div>
 
-  <div class="w3-half w3-hover-opacity" style="margin-top: 50px; cursor: pointer" onclick="changePage('bankDocuments')">
-    <img alt="" class="doublecenter" src="bank.png" style="width:25%">
-    <h3 class="center">Банк (бонк)</h3>
-  </div>
-    
+    <div class="w3-half" style="margin-top: 50px;">
+      <span style="cursor: pointer; border: none;" class="w3-hover-opacity" onclick="changePage('pensionDocuments')">
+        <img src="pension.png" style="width:20%"/>
+        <h3 class="center">Пенсионный фонд (АСИН)</h3>
+      </span>
+    </div>
 
-  <div class="w3-half w3-hover-opacity" style="margin-top: 50px; cursor: pointer" onclick="changePage('pensionDocuments')">
-    <img alt="" class="doublecenter" src="pension.png" style="width:25%">
-    <h3 class="center">Пенсионный фонд (АСИН)</h3>
-  </div>
-
-  <div class="w3-half w3-hover-opacity" style="margin-top: 50px; cursor: pointer" onclick="changePage('statisticsDocuments')">
-    <img alt="" class="doublecenter" src="tajstat.png" style="width:25%">
-    <h3 class="center">Статистика (омор)</h3>
-  </div>
+    <div class="w3-half" style="margin-top: 50px;">
+      <span style="cursor: pointer; border: none;" class="w3-hover-opacity" onclick="changePage('statisticsDocuments')">
+        <img src="tajstat.png" style="width:20%"/>
+        <h3 class="center">Статистика (омор)</h3>
+      </span>
+    </div>
+  
 </div>
 
 <!-- Tax documents-->
@@ -262,48 +273,60 @@
 
   <h2>Наши контакты</h2>
 
-  <a class="w3-hover-opacity" href="https://goo.gl/maps/74Vji7w96vEN3r8H6" target="_blank" style="text-decoration: none;">
-    <div class="w3-third" style="margin-top: 50px;">
-      <img src="address.png" />
-      <h3>Адрес</h3>
-      <p style="margin-top: 0px;">г. Худжанд</p>
+  <a href="https://goo.gl/maps/74Vji7w96vEN3r8H6" target="_blank">
+    <div class="w3-third">
+      <button class="w3-hover-opacity" style="margin-top: 50px; border: none; text-decoration: none;">
+        <img src="address.png" />
+        <h3>Адрес</h3>
+        <p style="margin-top: 0px;">г. Худжанд</p>
+      </button>
     </div>
   </a>
     
-  <a class="w3-hover-opacity" href="tel:+992927777777" style="text-decoration: none;">
-    <div class="w3-third" style="margin-top: 50px;">
-      <img src="telephone.png" />
+  <a href="tel:+992927777777">
+    <div class="w3-third">
+      <button class="w3-hover-opacity" style="margin-top: 50px; border: none;">
+        <img src="telephone.png" />
       <h3>Телефон</h3>
       <p style="margin-top: 0px;">+992 92 777 77 77</p>
+      </button>
     </div>
   </a>
   
-  <a class="w3-hover-opacity" href="mailto:info@buh.tj" style="text-decoration: none;">
-    <div class="w3-third" style="margin-top: 50px;">
-      <img src="email.png" />
+  <a href="mailto:info@buh.tj">
+    <div class="w3-third">
+      <button class="w3-hover-opacity" style="margin-top: 50px; border: none;">
+        <img src="email.png" />
       <h3>Эл. почта</h3>
       <p style="margin-top: 0px;">info@buh.tj</p>
+      </button>
     </div>
   </a>
     
-  <a class="w3-hover-opacity" href="viber://chat?number=992985026339" target="_blank" style="text-decoration: none;">
-    <div class="w3-third" style="margin-top: 50px;">
-      <img src="viber.png" />
+  <a href="viber://chat?number=992985026339" target="_blank">
+    <div class="w3-third">
+      <button class="w3-hover-opacity" style="margin-top: 50px; border: none; text-decoration: none;">
+        <img src="viber.png" />
       <h3>Viber</h3>
+      </button>
     </div>
   </a>
     
-  <a class="w3-hover-opacity" href="https://wa.me/992985026339" target="_blank" style="text-decoration: none;">
-    <div class="w3-third" style="margin-top: 50px;">
+  <a href="https://wa.me/992985026339" target="_blank">
+    <div class="w3-third">
+     <button class="w3-hover-opacity" style="margin-top: 50px; border: none; text-decoration: none;">
       <img src="whatsapp.png" />
       <h3>WhatsApp</h3>
+     </button>
     </div>
   </a>
   
-  <a class="w3-hover-opacity" href="https://msng.link/o/?SurikYusupov=tg" target="_blank" style="text-decoration: none;">
-    <div class="w3-third" style="margin-top: 50px;">  
-      <img src="telegram.png" />
+  <a href="https://msng.link/o/?SurikYusupov=tg" target="_blank">
+    <div class="w3-third">  
+      <button class="w3-hover-opacity" style="margin-top: 50px; border: none; text-decoration: none;">
+        <img src="telegram.png" />
       <h3>Telegram</h3>
+      </button>
     </div>
   </a>
 
