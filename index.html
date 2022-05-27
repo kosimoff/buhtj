@@ -48,7 +48,6 @@
       <span onclick="changePage('statisticsDocuments')" class="w3-bar-item w3-button">Документы статистики</span>
     </div>
   </div>
-  <span onclick="changePage('vacancies')" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Вакансии</span>
   <span onclick="changePage('contacts')" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Контакты</span>
     
   <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>
@@ -73,7 +72,6 @@
         <span onclick="changePage('statisticsDocuments')" class="w3-bar-item w3-button">Документы статистики</span>
       </div>
     </div>
-    <span onclick="changePage('vacancies')" class="w3-bar-item w3-button" style="cursor: pointer">Вакансии</span>
     <span onclick="changePage('contacts')" class="w3-bar-item w3-button" style="cursor: pointer">Контакты</span>
   </div>
 </div>
@@ -293,11 +291,6 @@
   <p style="margin-left: 20px;">В процессе</p>
 </div>
 
-<!-- Vacancies-->
-<div id="vacancies" class="w3-container w3-center w3-padding-64 w3-theme-l5">
-  <h2>Вакансии</h2>
-</div>
-
 <!-- Contacts-->
 <div id="contacts" class="w3-container w3-center w3-padding-64 w3-theme-l5">
 
@@ -426,7 +419,6 @@ function changePage(page_id){
   document.getElementById("bankDocuments").style.display = "none";
   document.getElementById("pensionDocuments").style.display = "none";
   document.getElementById("statisticsDocuments").style.display = "none";
-  document.getElementById("vacancies").style.display = "none";
   document.getElementById("contacts").style.display = "none";
   document.getElementById(page_id).style.display = "block";
   document.getElementById(page_id).scrollIntoView({ behavior: 'smooth'});
